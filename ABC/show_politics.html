@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            background-color: #333;
+        }
+
+            ul:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover:not(.active) {
+                    background-color: #777;
+                }
+
+        .active {
+            background-color: #4CAF50;
+        }
+
+        .dropbtn {
+            background-color: #333;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #777;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #777;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-3.4.1.min.js" charset="UTF-8"></script>
+</head>
+<body>
+    <h2>Automatic Bookmark Classifier</h2>
+    <ul>
+        <!--<li><a class="active" href="#home">Home</a></li>-->
+        <!--<li><a href="#news">Show</a></li>-->
+        <li class="dropdown">
+            <button class="dropbtn">Show</button>
+            <div class="dropdown-content">
+                <a href="show_politics.html">Politics</a>
+                <a href="show_economy.html">Economy</a>
+                <a href="show_society.html">Society</a>
+                <a href="show_world.html">World</a>
+                <a href="show_opinion.html">Opinion</a>
+                <a href="show_IT.html">IT</a>
+                <a href="show_culture.html">Culture</a>
+                <a href="show_etc.html">etc</a>
+            </div>
+        </li>
+        <li><a href="menu_categorize.html">Categorize</a></li>
+        <li><a href="menu_about.html">About</a></li>
+        <li><a href="menu.html">Home</a></li>
+    </ul>
+    <h1>Politics</h1>
+    <h2>Click one of the titles to go to web page</h2>
+    <br />
+    <p id="show_text"></p>
+    <script type="text/javascript" src="show_print.js"></script>
+</body>
+</html>
